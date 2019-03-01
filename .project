@@ -3,7 +3,6 @@
 <projectDescription>
 
 	<name>pattern_test</name>
-
 	<comment>Project pattern_test created by Buildship.</comment>
 
 	<projects>
@@ -35,11 +34,8 @@
 	</buildSpec>
 
 	<natures>
-
 		<nature>org.eclipse.jdt.core.javanature</nature>
-
 		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
-
 	</natures>
 
 </projectDescription>
