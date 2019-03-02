@@ -5,11 +5,22 @@ public class GroundBoss extends Boss {
         super();
         this.setName("대지 보스");
     }
-
-    public void fly() {
-        System.out.println("대지 보스는 날개가 없어서 날 수 없다.");
+    
+    @Override
+    public void attack() {
+    	System.out.println(this.getName() + "가 브레스 공격을 한다.");
     }
-
+    
+    @Override
+    public void move() {
+    	System.out.println(this.getName() + "가 육지 이동을 한다.");
+    }
+    
+    @Override
+    public void avoid() {
+    	System.out.println(this.getName() + "가 육지 회피를 한다.");
+    }
+    
     @Override
     public void show() {
         System.out.println("날개 없는 거대한 몬스터");
