@@ -3,11 +3,11 @@
  * 각 패턴 패키지의 Client[Pattern명] 클래스를 수행한다.
  */
 
-import patterns.strategy.ClientStrategy;
+import patterns.observer.*;
 
 public class Main {
     public static void main(String... args) {
-        ClientStrategy client = new ClientStrategy();
+        ObserverClient client = new ObserverClient();
 
         client.run();
     }
