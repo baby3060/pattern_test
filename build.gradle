@@ -55,3 +55,7 @@ task runJava(type: JavaExec) {
  
     classpath = sourceSets.main.runtimeClasspath
 }
+
+task myJavadocs(type: Javadoc) {
+  source = sourceSets.main.allJava
+}
