@@ -1,32 +1,60 @@
 package patterns.factory;
 
-import patterns.factory.method.*;
+import patterns.factory.abstractf.*;
 
 import java.text.NumberFormat;
 
 public class FactoryClient {
     public void run() {
-        ChickenFactory factory = new HodolChickenFactory();
+        ChickenFactory factory = new BokNeChickenFactory();
 
-        Chicken chicken = factory.orderChicken("GAL");
+        Chicken chicken = factory.orderChicken("FIRE");
 
         if(chicken != null) {
             print(chicken);
+            System.out.println(chicken);
+        }
+
+        chicken = factory.orderChicken("HO");
+
+        if(chicken != null) {
+            print(chicken);
+            System.out.println(chicken);
+        }
+
+        factory = new HodolChickenFactory();
+
+        chicken = factory.orderChicken("GAL");
+
+        if(chicken != null) {
+            print(chicken);
+            System.out.println(chicken);
         }
 
         chicken = factory.orderChicken("VF");
 
         if(chicken != null) {
             print(chicken);
+            System.out.println(chicken);
         }
 
-        factory = new BokNeChickenFactory();
+        factory = new NuNeChickenFactory();
 
-        chicken = factory.orderChicken("FR");
+        chicken = factory.orderChicken("SEA");
 
         if(chicken != null) {
             print(chicken);
+            System.out.println(chicken);
         }
+
+        chicken = factory.orderChicken("CLI");
+
+        if(chicken != null) {
+            print(chicken);
+            System.out.println(chicken);
+        }
+
+
     }
 
     public void print(Chicken chicken) {
