@@ -1,14 +1,28 @@
 package patterns.factory;
 
-import patterns.factory.before.*;
+import patterns.factory.method.*;
 
 import java.text.NumberFormat;
 
 public class FactoryClient {
     public void run() {
-        ChickenStore store = new ChickenStore();
+        ChickenFactory factory = new HodolChickenFactory();
 
-        Chicken chicken = store.orderChicken("HODOL_VF");
+        Chicken chicken = factory.orderChicken("GAL");
+
+        if(chicken != null) {
+            print(chicken);
+        }
+
+        chicken = factory.orderChicken("VF");
+
+        if(chicken != null) {
+            print(chicken);
+        }
+
+        factory = new BokNeChickenFactory();
+
+        chicken = factory.orderChicken("FR");
 
         if(chicken != null) {
             print(chicken);
