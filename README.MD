@@ -83,5 +83,4 @@ Java 디자인 패턴 연습
     <li>before, method, abstractf 패키지 이렇게 세 가지를 둘 것이다.</li>
     <li>before에서는 팩토리 패턴을 적용하지 않을 것이며, method에서는 팩토리 메소드 패턴을 적용, abstractf에서는 추상 팩토리 패턴을 적용할 것이다.</li>
     <li>치킨을 주문받고, 치킨 객체를 생성하는 과정까지 해 볼 것이다.</li>
-    <li></li>
 </ul>
