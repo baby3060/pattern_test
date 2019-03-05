@@ -55,8 +55,4 @@ public class ChickenStore {
         
         return chicken;
     }
-
-    public void returnningChicken(Chicken chicken) {
-        
-    }
 }
