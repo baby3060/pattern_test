@@ -4,6 +4,19 @@ package patterns.factory.abstractf;
  * 
  */
 public class BokNeRawMaFactory implements RawMaFactory {
+	private static RawMaFactory rawMaFactory;
+	
+	private BokNeRawMaFactory() {}
+	
+	public static RawMaFactory getInstance() {
+		if(rawMaFactory == null) {
+			synchronized (RawMaFactory.class) {
+				rawMaFactory = new BokNeRawMaFactory();
+			}
+		}
+		return rawMaFactory;
+	}
+	
     public Dough createDough() {
         return new BokNeDough();
     }

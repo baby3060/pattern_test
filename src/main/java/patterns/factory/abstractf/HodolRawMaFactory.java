@@ -4,6 +4,20 @@ package patterns.factory.abstractf;
  * 
  */
 public class HodolRawMaFactory implements RawMaFactory {
+	
+	private static RawMaFactory rawMaFactory;
+	
+	private HodolRawMaFactory() {}
+	
+	public static RawMaFactory getInstance() {
+		if(rawMaFactory == null) {
+			synchronized (RawMaFactory.class) {
+				rawMaFactory = new HodolRawMaFactory();
+			}
+		}
+		return rawMaFactory;
+	}
+	
     public Dough createDough() {
         return new HodolDough();
     }

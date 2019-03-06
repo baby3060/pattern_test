@@ -7,8 +7,8 @@ public class HodolChickenFactory extends ChickenFactory {
     public Chicken createChicken(String type) {
         Chicken chicken = null;
         
-        RawMaFactory rawFactory = new HodolRawMaFactory();
-
+        RawMaFactory rawFactory = HodolRawMaFactory.getInstance();
+        
         switch(type) {
             case "FR":
                 chicken = new HodolFriedChicken(rawFactory);

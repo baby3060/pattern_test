@@ -7,7 +7,7 @@ public class BokNeChickenFactory extends ChickenFactory {
     public Chicken createChicken(String type) {
         Chicken chicken = null;
 
-        RawMaFactory rawMaFactory = new BokNeRawMaFactory();
+        RawMaFactory rawMaFactory = BokNeRawMaFactory.getInstance();
 
         switch(type) {
             case "FIRE":

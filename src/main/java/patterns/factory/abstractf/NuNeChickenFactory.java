@@ -7,7 +7,7 @@ public class NuNeChickenFactory extends ChickenFactory {
     public Chicken createChicken(String type) {
         Chicken chicken = null;
         
-        RawMaFactory rawMaFactory = new NuNeRawMaFactory();
+        RawMaFactory rawMaFactory = NuNeRawMaFactory.getInstance();
 
         switch(type) {
             case "FR":
