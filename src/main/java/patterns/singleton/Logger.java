@@ -6,7 +6,7 @@ package patterns.singleton;
  */
 public class Logger {
     private Class target;
-    private static Logger logger;
+    private volatile static Logger logger;
 
     private Logger() {
         this(Logger.class);
@@ -18,6 +18,12 @@ public class Logger {
 
     public static Logger getLogger(Class target) {
         if( logger == null ) {
+            // 쓰레드 동기화 시 => 속도가 느리다.
+            /*
+            syncronized(Logger.class) {
+                logger = new Logger(target);
+            }
+            */
             logger = new Logger(target);
         }
         return logger;
