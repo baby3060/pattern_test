@@ -1,7 +1,7 @@
 package patterns.adapter;
 
 /**
- * 공격자를 지원가로 전환
+ * 구현하는 인터페이스(추상 클래스)를 둔갑
  */
 public class AdapterClient {
     public void run() {
@@ -32,5 +32,7 @@ public class AdapterClient {
         AttackAble attacker = new HelpToAttackObjectAdapter(fakeHelper);
 
         attacker.attack();
+
+        System.out.println("attacker는 지원가? " + (attacker instanceof HelpAble) + ", attacker는 공격자?" + (attacker instanceof AttackAble));
     }
 }
