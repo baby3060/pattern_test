@@ -7,6 +7,7 @@ public class AdapterClient {
     public void run() {
         /**
          * 공격자를 지원가로 속임
+         * Target : Main에서 필요한 객체타입(HelpAble), Adaptee(바꿔야 하는 타입) : AttackAble
          */
         AttackAble originalAttacker = new OriginalAttacker();
         HelpAble fakeHelper = new AttackToHelpObjectAdapter(originalAttacker);
@@ -34,5 +35,10 @@ public class AdapterClient {
         attacker.attack();
 
         System.out.println("attacker는 지원가? " + (attacker instanceof HelpAble) + ", attacker는 공격자?" + (attacker instanceof AttackAble));
+
+        HelpAble classHelper = new AttackerToHelpClassAdapter();
+        classHelper.help();
+
+        System.out.println("classHelper는 지원가? " + (classHelper instanceof HelpAble) + ", classHelper는 공격자?" + (classHelper instanceof AttackAble));
     }
 }
