@@ -1,7 +1,7 @@
 package patterns.adapter;
 
 /**
- * 지원 영웅을 공격으로 위장
+ * 지원 영웅(Adpatee)을 공격(Target)으로 위장
  * 객체를 활용한 어댑터
  */
 public class HelpToAttackObjectAdapter implements AttackAble {
