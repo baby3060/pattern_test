@@ -7,6 +7,8 @@ bin
 *.lock
 *.bin
 
+.settings
+.classpath
 
 ### Gradle Patch ###
 /build/
@@ -28,4 +30,5 @@ ehthumbs_vista.db
 *.zip
 *.tar.gz
 *.rar
+*.prefs
 .gradle
