@@ -40,5 +40,10 @@ public class AdapterClient {
         classHelper.help();
 
         System.out.println("classHelper는 지원가? " + (classHelper instanceof HelpAble) + ", classHelper는 공격자?" + (classHelper instanceof AttackAble));
+
+        AttackAble originalAttacker2 =  new AttackerToHelpClassAdapter();
+        originalAttacker2.attack();
+
+        System.out.println("originalAttacker2는 지원가? " + (originalAttacker2 instanceof HelpAble) + ", originalAttacker2는 공격자?" + (classHelper instanceof AttackAble));
     }
 }
