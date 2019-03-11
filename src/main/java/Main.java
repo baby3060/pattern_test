@@ -3,7 +3,7 @@
  * 각 패턴 패키지의 Client[Pattern명] 클래스를 수행한다.
  */
 
-import patterns.iterator.*;
+import patterns.composite.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ public class Main {
         
         logger.info("=================Start===================");
 
-        IteratorClient client = new IteratorClient();
+        CompositeClient client = new CompositeClient();
 
         client.run();
 
