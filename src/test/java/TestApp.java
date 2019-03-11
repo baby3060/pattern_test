@@ -1,12 +1,11 @@
 import junit.framework.TestCase;
-import patterns.command.*;
+import java.util.*;
+import java.text.SimpleDateFormat;
+
+import patterns.composite.*;
 
 public class TestApp extends TestCase {
     public void testApp() {
-        
     }
 
-    public void testApp2() {
-        
-    }
 }
