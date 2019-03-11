@@ -3,7 +3,7 @@
  * 각 패턴 패키지의 Client[Pattern명] 클래스를 수행한다.
  */
 
-import patterns.tempmethod.*;
+import patterns.iterator.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ public class Main {
         
         logger.info("=================Start===================");
 
-        TempClient client = new TempClient();
+        IteratorClient client = new IteratorClient();
 
         client.run();
 
